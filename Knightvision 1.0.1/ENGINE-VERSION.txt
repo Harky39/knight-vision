@@ -1,3 +1,0 @@
-KnightVision 1.0.1
-Stockfish 18 Lite WASM
-Opening Intelligence
