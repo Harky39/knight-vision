@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="ie=edge"
+    >
+
+    <title>KnightVision</title>
+
+    <link
+        href="style.css"
+        rel="stylesheet"
+        type="text/css"
+    >
+
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <div class="header">
+
+        <h1>KnightVision</h1>
+
+        <p class="subtitle">
+            AI Chess Analysis
+        </p>
+
+        <div class="plan-row">
+
+            <span
+                id="plan-badge"
+                class="plan-badge"
+            >
+                FREE
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MAIN CONTROLS
+         ===================================================== -->
+
+    <div class="top-settings">
+
+        <input
+            type="checkbox"
+            id="switch"
+        />
+
+        <label for="switch"></label>
+
+        <div class="status-div">
+            <p id="status"></p>
+        </div>
+
+        <div class="blob green"></div>
+
+    </div>
+
+
+    <!-- =====================================================
+         USAGE
+         ===================================================== -->
+
+    <div
+        id="usage-card"
+        class="usage-card"
+    >
+
+        <div class="usage-header">
+
+            <span>
+                Your analysis
+            </span>
+
+            <strong id="usage-text">
+                0 / 50
+            </strong>
+
+        </div>
+
+        <div class="usage-progress">
+
+            <div
+                id="usage-progress-bar"
+                class="usage-progress-bar"
+            ></div>
+
+        </div>
+
+        <p class="usage-remaining">
+            Free analyses remaining
+        </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         LOCKED / UPGRADE CARD
+         ===================================================== -->
+
+    <div
+    id="locked-card"
+    class="locked-card"
+    style="display: none;"
+>
+
+    <div class="lock-icon">
+        ♞
+    </div>
+
+    <div class="locked-content">
+
+        <h3>
+            50 Free Analyses Used
+        </h3>
+
+        <p>
+            You've used all 50 free analyses.
+        </p>
+
+        <p class="pro-message">
+            Upgrade to <strong>KnightVision Pro</strong>
+            for unlimited analysis.
+        </p>
+
+    </div>
+
+</div>
+
+
+    <!-- =====================================================
+         UPGRADE SECTION
+         ===================================================== -->
+
+    <div
+        id="upgrade-section"
+        class="upgrade-section"
+    >
+
+        <button
+            id="upgrade-button"
+            class="upgrade-button"
+            type="button"
+        >
+            Unlock KnightVision Pro
+        </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         ENGINE EVALUATION
+         ===================================================== -->
+
+    <hr>
+
+    <div class="section-heading">
+
+        <div class="section-title-wrap">
+            <h3>ENGINE EVALUATION</h3>
+            <span
+                class="info-icon"
+                title="KnightVision uses Stockfish 18. Free searches to depth 15; Pro searches to depth 25 for deeper analysis."
+                aria-label="More information"
+            >i</span>
+        </div>
+
+        <span id="engine-depth-badge" class="engine-depth-badge">Stockfish 18 • Depth 15</span>
+
+    </div>
+
+
+    <div class="evaluation-container">
+
+        <div class="evaluation-bar"></div>
+
+        <p class="evaluation">
+            +0.0
+        </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         OPENING BOOK
+         ===================================================== -->
+
+    <hr>
+
+    <div class="section-heading">
+
+        <div class="section-title-wrap">
+            <h3>OPENING INTELLIGENCE</h3>
+            <span
+                class="info-icon"
+                title="Pro recognises common openings from the move sequence and shows master-game continuations. Hover a move to highlight it on the board."
+                aria-label="More information"
+            >i</span>
+        </div>
+
+        <span class="pro-feature-label">PRO</span>
+
+    </div>
+
+
+    <ul
+        class="opening-moves-list"
+        id="opening-moves-list"
+    >
+    </ul>
+
+
+</div>
+
+
+<!-- =========================================================
+     POPUP JAVASCRIPT
+     ========================================================= -->
+
+<script src="popup.js"></script>
+
+</body>
+</html>
